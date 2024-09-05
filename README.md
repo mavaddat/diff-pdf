@@ -37,7 +37,7 @@ See the output of `$ diff-pdf --help` for complete list of options.
 ## Obtaining the binaries
 
 Precompiled version of the tool for Windows is available as part of
-[the latest release](https://github.com/vslavik/diff-pdf/releases/tag/v0.5)
+[the latest release](https://github.com/vslavik/diff-pdf/releases/latest/)
 as a ZIP archive, which contains everything you need to run diff-pdf. It will
 work from any place you unpack it to.
 
@@ -91,7 +91,14 @@ $ sudo yum groupinstall "Development Tools"
 $ sudo yum install wxGTK wxGTK-devel poppler-glib poppler-glib-devel
 ```
 
-#### Ubuntu:
+#### Ubuntu 24.04 / Debian 12 or newer:
+
+```
+$ sudo apt-get install make automake g++
+$ sudo apt-get install libpoppler-glib-dev poppler-utils libwxgtk3.2-dev
+```
+
+#### Older versions of Ubuntu / Debian:
 
 ```
 $ sudo apt-get install make automake g++
@@ -137,8 +144,8 @@ included with MSYS, using these commands:
 
     ```
     $ pacman -Syu
-    $ pacman -S automake autoconf pkg-config make zip
-    $ pacman -S mingw-w64-i686-{gcc,poppler,wxWidgets}
+    $ pacman -S automake autoconf pkg-config make zip pactoys
+    $ pacboy -S gcc:p poppler:p wxWidgets:p
     ```
 
 1. Build diff-pdf in the same way as in the instructions for Unix above:
